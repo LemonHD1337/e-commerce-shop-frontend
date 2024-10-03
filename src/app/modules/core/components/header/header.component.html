@@ -1,0 +1,57 @@
+<header class="container">
+  <nav class="navbar navbar-expand-lg bg-white">
+    <div class="container-fluid mx-5">
+      <a class="navbar-brand brand" routerLink="/">SHOP.PL</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Sklep
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li>
+                <a class="dropdown-item" routerLink="/products?category=T_SHIRT">T-shirt</a>
+              </li>
+              <li>
+                <a class="dropdown-item" routerLink="/products?category=SHORT">krótkie spodenki</a>
+              </li>
+              <li>
+                <a class="dropdown-item" routerLink="/products?category=SHIRT">koszulki</a>
+              </li>
+              <li>
+                <a class="dropdown-item" routerLink="/products?category=HOODIE">Bluzy</a>
+              </li>
+              <li>
+                <a class="dropdown-item" routerLink="/products?category=JEANS">Odzież jeansowa</a>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/products?sortBy=POPULARITY&isDescending=true">Popularne</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/products?sortBy=DATE&isDescending=true">Nowe</a>
+          </li>
+        </ul>
+        <form class="w-50 m-auto d-flex">
+          <div class="d-flex justify-content-center align-content-center p-2">
+            <mat-icon class="text-center mx-2">search</mat-icon>
+          </div>
+          <input
+            type="search"
+            id="search"
+            [value]="search"
+            placeholder="szukaj produktu po nazwie!"
+            class="w-100 border-0 p-2"
+          >
+        </form>
+        <div class="d-flex justify-content-center mx-2">
+          <mat-icon class="mx-2 icon">shopping_cart</mat-icon>
+          <mat-icon class="icon">account_circle</mat-icon>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
