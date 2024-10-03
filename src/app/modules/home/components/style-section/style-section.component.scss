@@ -1,0 +1,32 @@
+.casual, .gym, .formal, .party{
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 24px;
+}
+
+
+.casual, .gym, .formal, .party > h1{
+  padding-left: 25px;
+  padding-top: 25px;
+}
+
+.casual{
+  width: 42%;
+  background-image: url("/assets/casual.png");
+}
+
+.formal{
+  width: 52%;
+  background-image: url("/assets/formal.png");
+}
+
+.party{
+  width: 52%;
+  background-image: url("/assets/party.png");
+}
+
+.gym{
+  width: 42%;
+  background-image: url("/assets/gym.png");
+}

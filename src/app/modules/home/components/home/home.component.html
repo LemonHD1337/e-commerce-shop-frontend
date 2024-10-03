@@ -1,22 +1,33 @@
 <app-baner></app-baner>
 <app-brand-slider></app-brand-slider>
-
 <section class="text-center my-5">
-  <h1>Nowe</h1>
-  <div class="container">
-
-  </div>
-  <a routerLink="">Zobacz więcej</a>
-</section>
-
-<section class="text-center my-5">
-  <h1>Popularne</h1>
-  <div class="container d-flex">
-    <div *ngFor="let product of popularProducts">
-      <img src="/api/image/getByFilename/ + {{product.images[0]?.imageName}}" alt="product image">
+  <h1 class="my-5 bolder">NOWE</h1>
+  <div class="container d-flex justify-content-between gap-2">
+    <div *ngFor="let product of newProducts">
+      <img
+        src="/api/image/getByFilename/{{product.images[0].imageName}}"
+        alt="product image"
+        class="product-image"
+      >
       <h4>{{product.name}}</h4>
       <p>{{product.price}}</p>
     </div>
   </div>
-  <a routerLink="">Zobacz więcej</a>
+  <a class="styled-link" routerLink="">Zobacz Więcej</a>
 </section>
+<section class="text-center my-5">
+  <h1 class="my-5 bolder">POPULARNE</h1>
+  <div class="container d-flex justify-content-between gap-2">
+    <div *ngFor="let product of popularProducts">
+      <img
+        src="/api/image/getByFilename/{{product.images[0].imageName}}"
+        alt="product image"
+        class="product-image"
+      >
+      <h4>{{product.name}}</h4>
+      <p>{{product.price}}</p>
+    </div>
+  </div>
+  <a class="styled-link" routerLink="">Zobacz Więcej</a>
+</section>
+<app-style-section></app-style-section>
