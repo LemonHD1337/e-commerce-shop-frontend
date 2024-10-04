@@ -2,16 +2,28 @@
   <h1 class="bolder text-center my-5">SZUKAJ PO STYLU UBIERANIA</h1>
   <div class="container d-flex flex-wrap gap-5">
     <div class="casual">
-      <h1>Swobodny</h1>
+      <h1>
+        <a  [routerLink]="['/products', {dressStyle: 'CASUAL'}]">
+          Swobodny
+        </a>
+      </h1>
     </div>
     <div class="formal">
-      <h1>Formalny</h1>
+      <h1>
+        <a [routerLink]="['/products', {dressStyle: 'FORMAL'}]">
+          Formalny
+        </a>
+      </h1>
     </div>
     <div class="party">
-      <h1>Imprezowy</h1>
+      <h1>
+        <a [routerLink]="['/products', {dressStyle: 'PARTY'}]">Imprezowy</a>
+      </h1>
     </div>
     <div class="gym">
-      <h1>Fitnesowy</h1>
+      <h1>
+        <a [routerLink]="['/products', {dressStyle: 'GYM'}]">Fitnesowy</a>
+      </h1>
     </div>
   </div>
 </section>
