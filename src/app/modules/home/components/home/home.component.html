@@ -3,14 +3,14 @@
 <section class="text-center my-5">
   <h1 class="my-5 bolder">NOWE</h1>
   <div class="container d-flex justify-content-between gap-2">
-    <div *ngFor="let product of newProducts">
-      <img
-        src="/api/image/getByFilename/{{product.images[0].imageName}}"
-        alt="product image"
-        class="product-image"
+    <div class="container d-flex justify-content-between gap-2">
+      <app-product-card
+        *ngFor="let product of newProducts"
+        [imageName]="product.images[0].imageName"
+        [name]="product.name"
+        [price]="product.price"
       >
-      <h4>{{product.name}}</h4>
-      <p>{{product.price}}</p>
+      </app-product-card>
     </div>
   </div>
   <a class="styled-link" routerLink="">Zobacz Więcej</a>
@@ -18,15 +18,13 @@
 <section class="text-center my-5">
   <h1 class="my-5 bolder">POPULARNE</h1>
   <div class="container d-flex justify-content-between gap-2">
-    <div *ngFor="let product of popularProducts">
-      <img
-        src="/api/image/getByFilename/{{product.images[0].imageName}}"
-        alt="product image"
-        class="product-image"
-      >
-      <h4>{{product.name}}</h4>
-      <p>{{product.price}}</p>
-    </div>
+    <app-product-card
+      *ngFor="let product of popularProducts"
+      [imageName]="product.images[0].imageName"
+      [name]="product.name"
+      [price]="product.price"
+    >
+    </app-product-card>
   </div>
   <a class="styled-link" routerLink="">Zobacz Więcej</a>
 </section>
