@@ -1,0 +1,15 @@
+aside{
+  width: 30%;
+}
+
+aside > div > p{
+  color: gray;
+}
+
+section{
+  width: 70%;
+}
+
+.active{
+  color: black !important;
+}

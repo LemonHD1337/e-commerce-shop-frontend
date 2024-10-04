@@ -1,0 +1,37 @@
+<div class="container d-flex my-5">
+  <aside>
+    <h3>Filtry</h3>
+    <div class="category">
+      <h4>Kategorie</h4>
+      <p type="button" id="T_SHIRT" (click)="handleChangeCategory($event)">T-Shirt</p>
+      <p type="button" id="SHORT" (click)="handleChangeCategory($event)">Krótkie spodenki</p>
+      <p type="button" id="SHIRT" (click)="handleChangeCategory($event)">Koszulki</p>
+      <p type="button" id="HOODIE" (click)="handleChangeCategory($event)">Bluzy</p>
+      <p type="button" id="JEANS" (click)="handleChangeCategory($event)">Jeans</p>
+    </div>
+    <div>
+      <h4>Cena</h4>
+      <mat-slider min="0" max="2000">
+        <input value="0" matSliderStartThumb>
+        <input value="2000" matSliderEndThumb>
+      </mat-slider>
+      <p></p>
+    </div>
+    <div>
+      <h4>Kolory</h4>
+    </div>
+    <div>
+      <h4>Rozmiary</h4>
+    </div>
+    <div>
+      <h4>Styl</h4>
+      <p type="button" id="CASUAL" (click)="handleChangeStyle($event)">Swobodny</p>
+      <p type="button" id="FORMAL" (click)="handleChangeStyle($event)">Formalny</p>
+      <p type="button" id="PARTY" (click)="handleChangeStyle($event)">Imprezowy</p>
+      <p type="button" id="GYM" (click)="handleChangeStyle($event)">Fitnesowy</p>
+    </div>
+  </aside>
+  <section>
+
+  </section>
+</div>
