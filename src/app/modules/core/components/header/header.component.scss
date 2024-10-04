@@ -14,3 +14,12 @@ input#search, form{
   font-weight: bolder;
 }
 
+@media(max-width: 991px){
+  .nav-item-icon{
+    justify-content: start !important;
+    margin: 10px 0;
+  }
+  .nav-item-search{
+    width: 100% !important;
+  }
+}

@@ -3,7 +3,7 @@
 <section class="text-center my-5">
   <h1 class="my-5 bolder">NOWE</h1>
   <div class="container d-flex justify-content-between gap-2">
-    <div class="container d-flex justify-content-between gap-2">
+    <div class="container d-flex justify-content-between gap-2 product-list">
       <app-product-card
         *ngFor="let product of newProducts"
         [imageName]="product.images[0].imageName"
@@ -17,7 +17,7 @@
 </section>
 <section class="text-center my-5">
   <h1 class="my-5 bolder">POPULARNE</h1>
-  <div class="container d-flex justify-content-between gap-2">
+  <div class="container d-flex justify-content-between gap-2 product-list">
     <app-product-card
       *ngFor="let product of popularProducts"
       [imageName]="product.images[0].imageName"

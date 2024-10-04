@@ -1,0 +1,21 @@
+@media (max-width: 991px) {
+  .footer-container > p {
+    margin-top: 20px;
+  }
+
+  .footer-content > div{
+    width: 100%;
+  }
+
+  .footer-content > div > p > br{
+    display: none;
+  }
+
+  .footer-content > app-footer-column{
+    width: 50%;
+  }
+
+  .footer-content{
+    flex-wrap: wrap;
+  }
+}

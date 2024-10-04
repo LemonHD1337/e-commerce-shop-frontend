@@ -18,3 +18,10 @@ home-app{
   text-decoration: none;
   color: black;
 }
+
+
+@media (max-width: 991px){
+  .product-list{
+    overflow-x: scroll;
+  }
+}

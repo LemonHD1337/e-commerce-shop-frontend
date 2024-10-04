@@ -1,11 +1,41 @@
 .set-image{
   background-image: url("/assets/asset1.png");
   background-size: cover;
+  background-repeat: no-repeat;
   height:644px;
+}
+
+.image{
+  display: none;
 }
 
 .set-border{
   border-right: 1px solid black;
   border-left: 1px solid black;
   padding: 0 8px;
+}
+
+@media (max-width: 991px) {
+  .set-image{
+    background-image: url("/assets/asset2.png");
+    color: white;
+  }
+
+  .baner-text{
+    width: 100% !important;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .baner-text > div> h3{
+    font-weight: bold;
+  }
+
+  .set-border{
+    border: none;
+  }
+
+  .image{
+    display: block;
+  }
 }
