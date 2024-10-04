@@ -13,7 +13,10 @@
       </app-product-card>
     </div>
   </div>
-  <a class="styled-link" routerLink="">Zobacz Więcej</a>
+  <a class="styled-link" [routerLink]="['/products', {
+  sortBy: 'DATE',
+  isDescending: 'True'
+  }]">Zobacz Więcej</a>
 </section>
 <section class="text-center my-5">
   <h1 class="my-5 bolder">POPULARNE</h1>
@@ -26,6 +29,9 @@
     >
     </app-product-card>
   </div>
-  <a class="styled-link" routerLink="">Zobacz Więcej</a>
+  <a class="styled-link" [routerLink]="['/products', {
+  sortBy: 'POPULARITY',
+  isDescending: 'True'
+  }]">Zobacz Więcej</a>
 </section>
 <app-style-section></app-style-section>

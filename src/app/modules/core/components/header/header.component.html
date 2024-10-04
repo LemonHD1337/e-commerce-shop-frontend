@@ -13,26 +13,40 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <li>
-                <a class="dropdown-item" routerLink="/products?category=T_SHIRT">T-shirt</a>
+                <a class="dropdown-item" [routerLink]="['/products', {category: 'T_SHIRT'}]">
+                  T-shirt
+                </a>
               </li>
               <li>
-                <a class="dropdown-item" routerLink="/products?category=SHORT">krótkie spodenki</a>
+                <a class="dropdown-item" [routerLink]="['/products', {category: 'SHORT'}]">
+                  krótkie spodenki
+                </a>
               </li>
               <li>
-                <a class="dropdown-item" routerLink="/products?category=SHIRT">koszulki</a>
+                <a class="dropdown-item" [routerLink]="['/products', {category: 'SHIRT'}]">
+                  koszulki
+                </a>
               </li>
               <li>
-                <a class="dropdown-item" routerLink="/products?category=HOODIE">Bluzy</a>
+                <a class="dropdown-item" [routerLink]="['/products', {category: 'HOODIE'}]">
+                  Bluzy
+                </a>
               </li>
               <li>
-                <a class="dropdown-item" routerLink="/products?category=JEANS">Odzież jeansowa</a>
+                <a class="dropdown-item" [routerLink]="['/products', {category: 'JEANS'}]">
+                  Odzież jeansowa
+                </a>
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/products?sortBy=POPULARITY&isDescending=true">Popularne</a>
+            <a class="nav-link" [routerLink]="['/products', { sortBy: 'POPULARITY', isDescending: 'True'}]">
+              Popularne
+            </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/products?sortBy=DATE&isDescending=true">Nowe</a>
+            <a class="nav-link" [routerLink]="['/products', { sortBy: 'DATE', isDescending: 'True'}]">
+              Nowe
+            </a>
           </li>
           <li class="nav-item w-50 nav-item-search m-auto">
             <div>
@@ -67,7 +81,7 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="UserDropdown">
               <li>
-                <a routerLink="" class="dropdown-item">Zaloguj się</a>
+                <a [routerLink]="['/login']" class="dropdown-item">Zaloguj się</a>
               </li>
             </ul>
           </li>
