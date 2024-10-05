@@ -12,16 +12,42 @@
     <div>
       <h4>Cena</h4>
       <mat-slider min="0" max="2000">
-        <input value="0" matSliderStartThumb>
-        <input value="2000" matSliderEndThumb>
+        <input value="{{minPrice}}" name="min" (input)="handleChangePrice($event)" matSliderStartThumb>
+        <input value="{{maxPrice}}" matSliderEndThumb name="max" (input)="handleChangePrice($event)">
       </mat-slider>
-      <p></p>
+      <p>{{minPrice}} - {{maxPrice}}</p>
     </div>
     <div>
       <h4>Kolory</h4>
+      <div>
+
+      </div>
     </div>
     <div>
       <h4>Rozmiary</h4>
+      <div class="d-grid col-2 grid-template">
+        <p class="size-item" id="XX-SMALL" type="button" (click)="handleChangeSize($event)">
+          XXS
+        </p>
+        <p class="size-item" id="X-SMALL" type="button" (click)="handleChangeSize($event)">
+          XS
+        </p>
+        <p class="size-item" id="SMALL" type="button" (click)="handleChangeSize($event)">
+          S
+        </p>
+        <p class="size-item" id="MEDIUM" type="button" (click)="handleChangeSize($event)">
+          M
+        </p>
+        <p class="size-item" id="LARGE" type="button" (click)="handleChangeSize($event)">
+          L
+        </p>
+        <p class="size-item" id="X-LARGE" type="button" (click)="handleChangeSize($event)">
+          XL
+        </p>
+        <p class="size-item" id="XX-LARGE" type="button" (click)="handleChangeSize($event)">
+          XXL
+        </p>
+      </div>
     </div>
     <div>
       <h4>Styl</h4>
@@ -30,6 +56,7 @@
       <p type="button" id="PARTY" (click)="handleChangeStyle($event)">Imprezowy</p>
       <p type="button" id="GYM" (click)="handleChangeStyle($event)">Fitnesowy</p>
     </div>
+    <button class="apply-filer" type="button">Zastosuj filtry</button>
   </aside>
   <section>
 
